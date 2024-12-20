@@ -1,7 +1,6 @@
-//Angel Arellano
-//CSE 122
-//Absurdle
 /*
+Angel Arellano
+Absurdle
 The purpose of this class is to make a game similar to the New York Times game, wordle.
 The game prompts the user to enter a dictionary file and length of word they wish to play with.
 The user then enters a word to try and guess the word that the game has chosen. If the player
@@ -111,9 +110,6 @@ public class Absurdle  {
     will experience a IllegalArgument exception.
     */
     public static String record(String guess, Set<String> words, int wordLength) {
-        //get pattern as a key. Go through each word and see if the word from the set is fit
-        //with the pattern
-        //if so add that word to the key,
         if (guess.length() != wordLength || words.isEmpty()){
             throw new IllegalArgumentException("You've ran into an error!");
         }
@@ -210,8 +206,6 @@ public class Absurdle  {
         for (int patternSquare = 0; patternSquare < userGuess.size(); patternSquare++){
             pattern += userGuess.get(patternSquare);
         }
-        // System.out.println(correctWord);
-        // System.out.println(charCounter);
         return pattern;
     }
 }
